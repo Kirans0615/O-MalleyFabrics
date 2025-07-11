@@ -22,6 +22,10 @@ header {
     color: #fff;
     padding: 1.2rem 0;
     border-bottom: 4px solid #5a8a5a; /* Slightly lighter green border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 header .container {
