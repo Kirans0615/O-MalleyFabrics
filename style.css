@@ -602,3 +602,197 @@ footer p {
         font-size: 1em;
     }
 }
+
+@media (max-width: 992px) {
+  .hero .hero-content-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text-content {
+    padding-right: 0;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+  .hero h2 {
+    font-size: 2.6em;
+  }
+
+  .hero p {
+    font-size: 1.1em;
+    margin: 0 auto 30px auto;
+  }
+
+  .hero-images {
+    padding-left: 0;
+    padding-top: 20px;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .hero-images img {
+    max-width: 45%;
+  }
+
+  .service-grid,
+  .gallery-grid,
+  .contact-details {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .gallery-item-before-after .before-after-images {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .gallery-item-before-after .before-after-images img {
+    width: 100%;
+    height: auto;
+  }
+
+  .gallery-item-before-after .before-after-images img:first-child {
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .contact-item {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .about-content .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav ul {
+    margin-top: 20px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  .hero h2 {
+    font-size: 2.2em;
+  }
+
+  .btn {
+    padding: 12px 25px;
+    font-size: 0.95em;
+  }
+
+  .gallery-item img {
+    height: 200px;
+  }
+
+  .about-hero h2,
+  .services-section h3,
+  .gallery-section h3,
+  .contact-info-section h3 {
+    font-size: 2.2em;
+  }
+
+  .about-text p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.6em;
+  }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero h2 {
+    font-size: 1.8em;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+
+  .gallery-item img {
+    height: 180px;
+  }
+
+  .about-hero h2 {
+    font-size: 1.8em;
+  }
+
+  .about-text p {
+    font-size: 0.95em;
+  }
+
+  .contact-details {
+    gap: 20px;
+  }
+
+  .contact-item {
+    padding: 20px;
+  }
+
+  .hero-images img {
+    max-width: 100%;
+  }
+}
+
+/* Additional: Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Additional: Sticky Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2a5a2a;
+  color: #fff;
+  padding: 12px 15px;
+  border-radius: 50%;
+  font-size: 1.2em;
+  text-align: center;
+  display: none;
+  z-index: 2000;
+  transition: background 0.3s ease;
+}
+
+.back-to-top:hover {
+  background: #1e451e;
+}
+
+.back-to-top.show {
+  display: block;
+}
+
