@@ -470,139 +470,9 @@ footer p {
     margin: 8px 0;
 }
 
-/* Responsive Design */
-@media (max-width: 992px) { /* Adjust breakpoint for hero image stacking */
-    .hero .hero-content-wrapper {
-        flex-direction: column; /* Stack text and images vertically */
-        text-align: center; /* Center content when stacked */
-    }
+/* --- EXISTING STYLES REMAIN ABOVE --- */
 
-    .hero-text-content {
-        padding-right: 0; /* Remove right padding */
-        padding-bottom: 40px; /* Add space below text */
-    }
-
-    .hero p {
-        margin: 0 auto 40px auto; /* Center paragraph when stacked */
-    }
-
-    .hero-images {
-        padding-left: 0; /* Remove left padding */
-        padding-top: 20px; /* Add space above images */
-    }
-
-    /* All grid sections (services, gallery, contact details) stack on screens <= 992px */
-    .service-grid,
-    .gallery-grid,
-    .contact-details {
-        grid-template-columns: 1fr; /* Force single column */
-        max-width: none; /* Allow to expand to container width */
-        margin: 0 auto; /* Re-center if needed */
-    }
-
-    /* Before & After images stack on small screens when the grid becomes 1 column */
-    .gallery-item-before-after .before-after-images {
-        flex-direction: column; /* Stack images vertically */
-        height: auto; /* Allow height to adjust */
-    }
-    .gallery-item-before-after .before-after-images img {
-        width: 100%; /* Each image takes full width */
-        height: auto; /* Allow height to adjust */
-    }
-    .gallery-item-before-after .before-after-images img:first-child {
-        border-right: none; /* Remove right border when stacked */
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Add bottom border */
-    }
-}
-
-/* You can keep this 768px media query for further fine-tuning if needed,
-   but the 992px query now handles the stacking for grids. */
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    header nav ul {
-        margin-top: 20px;
-        justify-content: center;
-    }
-
-    header nav ul li {
-        margin: 0 12px;
-    }
-
-    header h1 {
-        font-size: 2.2em;
-    }
-
-    .hero h2 {
-        font-size: 2.8em;
-    }
-
-    .hero p {
-        font-size: 1.1em;
-    }
-
-    .services-section h3,
-    .call-to-action h3,
-    .gallery-section h3,
-    .contact-info-section h3,
-    .about-hero h2 {
-        font-size: 2.4em;
-    }
-
-    /* .contact-details is already handled by 992px media query for stacking */
-    /* .contact-details {
-        flex-direction: column;
-        align-items: center;
-    } */
-
-    .contact-item {
-        max-width: 90%; /* Allow contact items to take more width */
-    }
-
-    .about-content .container {
-        flex-direction: column;
-        align-items: center; /* Center items when stacked */
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.8em;
-    }
-
-    header nav ul li {
-        margin: 0 8px;
-    }
-
-    .hero {
-        padding: 70px 0;
-    }
-
-    .hero h2 {
-        font-size: 2em;
-    }
-
-    .btn {
-        padding: 12px 25px;
-        font-size: 0.9em;
-    }
-
-    .gallery-item img {
-        height: 200px; /* Smaller height for mobile gallery images */
-    }
-
-    .about-hero h2 {
-        font-size: 2em;
-    }
-
-    .about-text p {
-        font-size: 1em;
-    }
-}
-
+/* Responsive Design Enhancements */
 @media (max-width: 992px) {
   .hero .hero-content-wrapper {
     flex-direction: column;
@@ -630,10 +500,16 @@ footer p {
     flex-direction: row;
     gap: 10px;
     justify-content: center;
+    align-items: flex-start;
   }
 
   .hero-images img {
     max-width: 45%;
+    height: auto;
+  }
+
+  .hero-images img:first-child {
+    transform: translateY(-10px);
   }
 
   .service-grid,
@@ -754,8 +630,20 @@ footer p {
     padding: 20px;
   }
 
+  .hero-images {
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
   .hero-images img {
-    max-width: 100%;
+    max-width: 45%;
+    height: auto;
+  }
+
+  .hero-images img:first-child {
+    transform: translateY(-10px);
   }
 }
 
@@ -791,6 +679,11 @@ header {
 .back-to-top:hover {
   background: #1e451e;
 }
+
+.back-to-top.show {
+  display: block;
+}
+
 
 .back-to-top.show {
   display: block;
