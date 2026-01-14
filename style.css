@@ -135,13 +135,14 @@ header nav ul li a.active {
 }
 
 .hero-images img {
-    width: 100%; /* Make images fill their container */
-    max-width: 300px; /* Max width for individual images */
+    width: 100%;
+    max-width: 200px; /* smaller than 300px */
     height: auto;
-    border-radius: 8px; /* Slightly rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    border: 2px solid #e6b800; /* Gold border */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #e6b800;
 }
+
 
 
 /* Buttons */
