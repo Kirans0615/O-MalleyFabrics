@@ -1,692 +1,366 @@
-/* General Body and Base Styles */
-body {
-    font-family: 'Merriweather', serif; /* A classic, warm serif font */
-    line-height: 1.7; /* Slightly more spacious line height */
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f4; /* A soft, warm off-white */
-    color: #333;
-}
-
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
-    overflow: hidden;
-    padding: 0 20px;
-}
-
-/* Header */
-header {
-    background: #2a5a2a; /* A deep, rich forest green */
-    color: #fff;
-    padding: 1.2rem 0;
-    border-bottom: 4px solid #5a8a5a; /* Slightly lighter green border */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-header h1 {
-    margin: 0;
-    font-family: 'Playfair Display', serif; /* More elegant font for the name */
-    font-size: 2.5em;
-    letter-spacing: 1px;
-}
-
-header nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-header nav ul li {
-    margin-left: 25px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 5px 0;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-}
-
-header nav ul li a:hover,
-header nav ul li a.active {
-    color: #ccaa00; /* A golden yellow for contrast */
-    border-bottom: 2px solid #ccaa00;
-}
-
-/* Hero Section (Home Page) */
-.hero {
-    background: #4a7a4a url('https://via.placeholder.com/1500x500/4a7a4a/ffffff?text=O%27Malley+Fabrics+-+Traditional+Craft') no-repeat center center/cover; /* Green tint */
-    color: #fff;
-    text-align: center; /* Default for fallback */
-    padding: 90px 0;
-    display: flex; /* Changed to flex for internal alignment */
-    align-items: center;
-    justify-content: center;
-    min-height: 450px;
-    position: relative; /* For overlay */
-    overflow: hidden; /* Ensure images don't spill out */
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.2); /* Subtle dark overlay for text readability */
-    z-index: 1;
-}
-
-.hero .hero-content-wrapper { /* New wrapper for text and images */
-    display: flex;
-    justify-content: space-between; /* Space out text and images */
-    align-items: center;
-    position: relative; /* Bring content above overlay */
-    z-index: 2;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    text-align: left; /* Default text alignment */
-}
-
-.hero-text-content {
-    flex: 2; /* Take up more space */
-    min-width: 300px; /* Ensure text doesn't get too narrow */
-    text-align: left; /* Align text within its container */
-    padding-right: 20px; /* Space between text and images */
-}
-
-.hero h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5em;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-.hero p {
-    font-size: 1.3em;
-    max-width: 750px; /* Still constrain width of the text itself */
-    margin: 0 0 40px 0; /* Adjust margin for left alignment */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-.hero-images {
-    flex: 1; /* Take up remaining space */
-    display: flex;
-    flex-direction: column; /* Stack images vertically */
-    gap: 15px; /* Space between stacked images */
-    align-items: center; /* Center images if they don't fill flex item */
-    min-width: 280px; /* Ensure images don't get too small */
-    padding-left: 20px; /* Space between text and images */
-}
-
-.hero-images img {
-    width: 100%;
-    max-width: 200px; /* smaller than 300px */
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    border: 2px solid #e6b800;
-}
-
-
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    background: #e6b800; /* Rich gold/yellow */
-    color: #2a5a2a; /* Green text on gold button */
-    padding: 14px 30px;
-    text-decoration: none;
-    border-radius: 30px; /* More rounded */
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: background 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.btn:hover {
-    background: #cc9900;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-}
-
-.primary-btn {
-    background: #2a5a2a; /* Green button */
-    color: #fff;
-}
-
-.primary-btn:hover {
-    background: #1e451e;
-    color: #fff;
-}
-
-/* Services Section (Home Page) */
-.services-section {
-    padding: 70px 0;
-    background: #fff;
-    text-align: center;
-}
-
-.services-section h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.8em;
-    margin-bottom: 50px;
-    color: #2a5a2a;
-}
-
-/* MODIFIED: Service Grid for 2x2 layout */
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Forces 2 columns, equal width */
-    gap: 35px;
-    max-width: 900px; /* Constrain grid width for better appearance */
-    margin: 0 auto; /* Center the grid */
-}
-
-.service-item {
-    background: #fdfdfd;
-    padding: 35px;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #eee;
-}
-
-.service-item:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-.service-item h4 {
-    font-family: 'Playfair Display', serif;
-    color: #2a5a2a;
-    font-size: 1.8em;
-    margin-bottom: 18px;
-}
-
-/* Gallery Section (Home Page) */
-.gallery-section {
-    padding: 70px 0;
-    background: #f0f5ec; /* Light green background */
-    text-align: center;
-}
-
-.gallery-section h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.8em;
-    margin-bottom: 50px;
-    color: #2a5a2a;
-}
-
-/* MODIFIED: Gallery Grid for 2x2 layout */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Forces 2 columns, equal width */
-    gap: 30px;
-    max-width: 900px; /* Constrain grid width for better appearance */
-    margin: 0 auto; /* Center the grid */
-}
-
-.gallery-item {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-/* This rule applies to single images in other gallery items */
-.gallery-item img {
-    width: 100%;
-    height: 250px; /* Fixed height for consistency */
-    object-fit: cover; /* Ensures image covers area without distortion */
-    display: block;
-    border-bottom: 3px solid #e6b800; /* Gold border beneath image */
-}
-
-/* NEW STYLES for Before & After Item - adjusted for desired size */
-.gallery-item-before-after .before-after-images {
-    display: flex; /* Make images inside this item flex to go side-by-side */
-    width: 100%; /* Take full width of parent gallery-item */
-    height: 250px; /* IMPORTANT: This makes the combined height match other gallery items */
-    overflow: hidden; /* Hide anything that spills out */
-    border-bottom: 3px solid #e6b800; /* Gold border beneath image area */
-}
-
-.gallery-item-before-after .before-after-images img {
-    width: 50%; /* Each image takes half the width of .before-after-images */
-    height: 100%; /* Each image fills the height of .before-after-images */
-    object-fit: cover;
-    border-radius: 0; /* Remove individual border-radius if any */
-    box-shadow: none; /* Remove individual shadow if any */
-    border: none; /* Remove individual border if any */
-}
-
-/* Adding a subtle border between before/after images */
-.gallery-item-before-after .before-after-images img:first-child {
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-
-.gallery-item .caption {
-    padding: 15px;
-    font-size: 1em;
-    color: #555;
-    font-style: italic;
-    background-color: #f9f9f9;
-}
-
-/* Contact Info Section (Home Page) */
-.contact-info-section {
-    padding: 70px 0;
-    background: #fff;
-    text-align: center;
-}
-
-.contact-info-section h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.8em;
-    margin-bottom: 30px;
-    color: #2a5a2a;
-}
-
-.contact-info-section p {
-    font-size: 1.1em;
-    margin-bottom: 30px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.contact-details {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.contact-item {
-    background: #fdfdfd;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
-    flex: 1;
-    min-width: 280px;
-    max-width: 350px;
-    text-align: center;
-    border: 1px solid #eee;
-}
-
-.contact-item h4 {
-    font-family: 'Playfair Display', serif;
-    color: #2a5a2a;
-    font-size: 1.6em;
-    margin-bottom: 15px;
-}
-
-.contact-item p {
-    font-size: 1.05em;
-    margin: 5px 0;
-    line-height: 1.5;
-}
-
-.contact-item a {
-    color: #2a5a2a;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.contact-item a:hover {
-    color: #e6b800;
-}
-
-.small-text {
-    font-size: 0.9em;
-    color: #777;
-    margin-top: 10px;
-}
-
-.note {
-    font-style: italic;
-    margin-top: 40px;
-    color: #666;
-}
-
-/* --- About Page Specific Styles --- */
-.about-hero {
-    background: #5a8a5a url('https://via.placeholder.com/1500x500/5a8a5a/ffffff?text=Grainne+O%27Malley+-+About+Us') no-repeat center center/cover; /* Lighter green tint */
-    color: #fff;
-    text-align: center;
-    padding: 90px 0;
-    min-height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.about-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.15); /* Subtle overlay */
-    z-index: 1;
-}
-
-.about-hero .container {
-    position: relative;
-    z-index: 2;
-}
-
-.about-hero h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.2em;
-    margin-bottom: 18px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-.about-content {
-    padding: 70px 0;
-    background: #fff;
-}
-
-.about-content .container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    align-items: flex-start; /* Align items to the top */
-}
-
-.about-text {
-    flex: 2;
-    min-width: 320px;
-    line-height: 1.8;
-}
-
-.about-text p {
-    margin-bottom: 22px;
-    font-size: 1.15em;
-}
-
-.about-image {
-    flex: 1;
-    min-width: 280px;
-    text-align: center;
-    padding-top: 20px; /* Space above image if text wraps */
-}
-
-.about-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    border: 3px solid #e6b800; /* Gold border around image */
-}
-
-.image-caption {
-    margin-top: 15px;
-    font-style: italic;
-    color: #555;
-    font-size: 0.95em;
-}
-
-
-/* Footer */
-footer {
-    background: #1a1a1a; /* Darker footer */
-    color: #e0e0e0;
-    text-align: center;
-    padding: 35px 0;
-    margin-top: 50px;
-    font-size: 0.9em;
-}
-
-footer p {
-    margin: 8px 0;
-}
-
-/* --- EXISTING STYLES REMAIN ABOVE --- */
-
-/* Responsive Design Enhancements */
-@media (max-width: 992px) {
-  .hero .hero-content-wrapper {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-text-content {
-    padding-right: 0;
-    padding-bottom: 40px;
-    text-align: center;
-  }
-
-  .hero h2 {
-    font-size: 2.6em;
-  }
-
-  .hero p {
-    font-size: 1.1em;
-    margin: 0 auto 30px auto;
-  }
-
-  .hero-images {
-    padding-left: 0;
-    padding-top: 20px;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: center;
-    align-items: flex-start;
-  }
-
-  .hero-images img {
-    max-width: 45%;
-    height: auto;
-  }
-
-  .hero-images img:first-child {
-    transform: translateY(-10px);
-  }
-
-  .service-grid,
-  .gallery-grid,
-  .contact-details {
-    grid-template-columns: 1fr;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-  .gallery-item-before-after .before-after-images {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .gallery-item-before-after .before-after-images img {
-    width: 100%;
-    height: auto;
-  }
-
-  .gallery-item-before-after .before-after-images img:first-child {
-    border-right: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .contact-item {
-    max-width: 90%;
-    margin: 0 auto;
-  }
-
-  .about-content .container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media (max-width: 768px) {
-  header .container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  header nav ul {
-    margin-top: 20px;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  header nav ul li {
-    margin: 10px 0;
-  }
-
-  header h1 {
-    font-size: 2em;
-  }
-
-  .hero h2 {
-    font-size: 2.2em;
-  }
-
-  .btn {
-    padding: 12px 25px;
-    font-size: 0.95em;
-  }
-
-  .gallery-item img {
-    height: 200px;
-  }
-
-  .about-hero h2,
-  .services-section h3,
-  .gallery-section h3,
-  .contact-info-section h3 {
-    font-size: 2.2em;
-  }
-
-  .about-text p {
-    font-size: 1em;
-  }
-}
-
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.6em;
-  }
-
-  .hero {
-    padding: 60px 0;
-  }
-
-  .hero h2 {
-    font-size: 1.8em;
-  }
-
-  .btn {
-    padding: 10px 20px;
-    font-size: 0.9em;
-  }
-
-  .gallery-item img {
-    height: 180px;
-  }
-
-  .about-hero h2 {
-    font-size: 1.8em;
-  }
-
-  .about-text p {
-    font-size: 0.95em;
-  }
-
-  .contact-details {
-    gap: 20px;
-  }
-
-  .contact-item {
-    padding: 20px;
-  }
-
-  .hero-images {
-    flex-direction: row;
-    gap: 10px;
-    justify-content: center;
-    align-items: flex-start;
-  }
-
-  .hero-images img {
-    max-width: 45%;
-    height: auto;
-  }
-
-  .hero-images img:first-child {
-    transform: translateY(-10px);
-  }
-}
-
-/* Additional: Smooth Scroll */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Additional: Sticky Header */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Optional: Back to Top Button */
-.back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #2a5a2a;
-  color: #fff;
-  padding: 12px 15px;
-  border-radius: 50%;
-  font-size: 1.2em;
-  text-align: center;
-  display: none;
-  z-index: 2000;
-  transition: background 0.3s ease;
-}
-
-.back-to-top:hover {
-  background: #1e451e;
-}
-
-.back-to-top.show {
-  display: block;
-}
-
-
-.back-to-top.show {
-  display: block;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>O'Malley Fabrics | Alterations, Curtains & Soft Furnishings</title>
+
+    <meta
+        name="description"
+        content="O'Malley Fabrics offers tailoring, alterations, custom curtains, soft furnishings, and sewing services across Washington D.C., Maryland, and Virginia."
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/x-icon" href="favicon1.ico" />
+</head>
 
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+
+            <div class="logo-area">
+                <h1>O'Malley Fabrics</h1>
+                <p class="tagline">
+                    Fine Sewing & Soft Furnishings in the DMV
+                </p>
+            </div>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html" class="active">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">About Grainne</a>
+                    </li>
+
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+
+                    <li>
+                        <a href="#gallery">Gallery</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <main>
+
+        <section class="hero">
+
+            <div class="container hero-content-wrapper">
+
+                <div class="hero-text-content">
+
+                    <p class="intro-text">
+                        Céad Míle Fáilte
+                    </p>
+
+                    <h2>
+                        Beautiful Sewing, Thoughtful Craftsmanship & Timeless Design
+                    </h2>
+
+                    <p>
+                        O'Malley Fabrics specializes in alterations,
+                        curtain making, soft furnishings, garment repairs,
+                        and custom sewing projects throughout the DMV area.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#services" class="btn">
+                            Explore Services
+                        </a>
+
+                        <a
+                            href="https://calendly.com/omalleyfabrics/30min"
+                            class="btn primary-btn"
+                            target="_blank"
+                        >
+                            Book Consultation
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="hero-images">
+
+                    <img
+                        src="PICS/two.jpg"
+                        alt="Grainne sewing custom fabric pieces"
+                        class="hero-img-top"
+                    />
+
+                    <img
+                        src="PICS/OMalleyStore.jpg"
+                        alt="O'Malley Fabrics heritage and Irish inspiration"
+                        class="hero-img-bottom"
+                    />
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" class="services-section fade-in">
+
+            <div class="container">
+
+                <h3>Our Services</h3>
+
+                <div class="service-grid">
+
+                    <div class="service-item">
+                        <h4>Tailoring & Alterations</h4>
+
+                        <p>
+                            Precision tailoring and garment alterations
+                            designed for comfort, confidence, and the perfect fit.
+                        </p>
+                    </div>
+
+                    <div class="service-item">
+                        <h4>Custom Curtains & Repairs</h4>
+
+                        <p>
+                            Elegant curtain making, hemming,
+                            resizing, and drapery repairs tailored to your space.
+                        </p>
+                    </div>
+
+                    <div class="service-item">
+                        <h4>Soft Furnishings</h4>
+
+                        <p>
+                            Custom cushions, decorative pillows,
+                            bench seating, and upholstery accents
+                            to refresh your home beautifully.
+                        </p>
+                    </div>
+
+                    <div class="service-item">
+                        <h4>Custom Sewing Projects</h4>
+
+                        <p>
+                            Unique handcrafted sewing projects created
+                            with care, creativity, and attention to detail.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- GALLERY -->
+        <section id="gallery" class="gallery-section fade-in">
+
+            <div class="container">
+
+                <h3>A Glimpse of Our Work</h3>
+
+                <div class="gallery-grid">
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="PICS/KidsStore.jpg"
+                            alt="Family fabric shop in County Mayo Ireland"
+                        />
+
+                        <p class="caption">
+                            Inspired by generations of craftsmanship
+                            from County Mayo, Ireland
+                        </p>
+
+                    </div>
+
+                    <div class="gallery-item gallery-item-before-after">
+
+                        <div class="before-after-images">
+
+                            <img
+                                src="PICS/before.jpg"
+                                alt="Before upholstery transformation"
+                            />
+
+                            <img
+                                src="PICS/cushion.jpg"
+                                alt="After upholstery transformation"
+                            />
+
+                        </div>
+
+                        <p class="caption">
+                            Furniture transformation before & after
+                        </p>
+
+                    </div>
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="PICS/curtain.jpg"
+                            alt="Custom made curtain project"
+                        />
+
+                        <p class="caption">
+                            Bespoke curtain work crafted for elegant interiors
+                        </p>
+
+                    </div>
+
+                    <div class="gallery-item">
+
+                        <img
+                            src="PICS/pillow.jpg"
+                            alt="Restored decorative pillows"
+                        />
+
+                        <p class="caption">
+                            Revitalized pillows and soft furnishings
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact-info-section fade-in">
+
+            <div class="container">
+
+                <h3>Connect With O'Malley Fabrics</h3>
+
+                <p>
+                    We'd love to discuss your next project,
+                    alteration, or custom furnishing idea.
+                </p>
+
+                <div class="contact-details">
+
+                    <div class="contact-item">
+
+                        <h4>Email</h4>
+
+                        <p>
+                            <a href="mailto:omalleyfabrics@gmail.com">
+                                omalleyfabrics@gmail.com
+                            </a>
+                        </p>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <h4>Phone</h4>
+
+                        <p>
+                            <a href="tel:+13014489733">
+                                (301) 448-9733
+                            </a>
+                        </p>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <h4>Serving</h4>
+
+                        <p>
+                            Washington D.C., Maryland & Virginia
+                        </p>
+
+                        <p class="small-text">
+                            Appointments available by consultation
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="note">
+                    Consultations are available for both residential
+                    and custom sewing projects.
+                </p>
+
+                <a
+                    href="https://calendly.com/omalleyfabrics/30min"
+                    class="btn"
+                    target="_blank"
+                >
+                    Schedule Appointment
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="container">
+
+            <p>
+                &copy; 2025 O'Malley Fabrics. All Rights Reserved.
+            </p>
+
+            <p>
+                Crafted with tradition, creativity, and care.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <a href="#" class="back-to-top" id="backToTop">
+        ↑
+    </a>
+
+    <!-- SCRIPT -->
+    <script>
+
+        const backToTop =
+            document.getElementById("backToTop");
+
+        window.addEventListener("scroll", () => {
+
+            if (window.scrollY > 300) {
+                backToTop.classList.add("show");
+            } else {
+                backToTop.classList.remove("show");
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
