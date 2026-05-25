@@ -1,72 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Grainne O'Malley - O'Malley Fabrics</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="favicon1.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet Grainne O'Malley — a master seamstress with roots in County Mayo, Ireland, now bringing expert alterations and sewing services to the DMV.">
+  <title>About Grainne O'Malley – O'Malley Fabrics</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="favicon1.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>O'Malley Fabrics</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About Grainne</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <main>
-        <section class="about-content">
-            <div class="container">
-                <div class="about-image">
-                    <img src="PICS/mom.jpg" alt="Grainne O'Malley, Master Seamstress">
-                    <p class="image-caption">Grainne O'Malley</p>
-                </div>
-                <div class="about-text">
-                    <h2>Craftsmanship Rooted in Heritage</h2>
-                    
-                    <p>Grainne O'Malley grew up in County Mayo, Ireland, surrounded by fine fabrics and the craft of tailoring in her family's beloved fabric store. Inspired by her mother Anne—an accomplished seamstress known for exquisite wedding dresses and bespoke designs—Grainne developed a deep passion for quality textiles and precision garment alteration.</p>
+<!-- ═══════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════ -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <a href="index.html">O'Malley Fabrics</a>
+    </div>
 
-                    <p>Now based in Bethesda, Maryland, Grainne brings that same dedication to detail and craftsmanship to every project. She specializes in custom garment alterations that ensure a perfect fit, as well as bespoke home décor solutions including custom curtains and tailored pillows.</p>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-                    <p><strong>O'Malley Fabrics honors this family legacy of excellence.</strong> Whether you need a professional alteration to perfect your wardrobe, custom window treatments to enhance your home, or decorative pillows to add a refined finishing touch, Grainne works with you to bring your vision to life.</p>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#gallery">Gallery</a></li>
+      <li><a href="index.html#lessons">Lessons</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
-                    <p>With attention to detail and a genuine passion for quality, she's committed to delivering exceptional results on every project, no matter the scale.</p>
-                </div>
-        </section>
+<main role="main">
 
-        <section class="call-to-action">
-            <div class="container">
-                <h2>Let's Create Something Beautiful</h2>
-                <p>Ready to discuss your fabric and sewing project? Reach out to schedule a consultation.</p>
+<!-- ═══════════════════════════════════════
+     ABOUT HERO
+═══════════════════════════════════════ -->
+<header class="about-hero" role="banner">
+  <div class="container">
+    <span class="eyebrow">About Grainne</span>
+    <h1>A Passion for Fabric,<br>Rooted in Heritage</h1>
+    <p>Master seamstress. County Mayo native. DMV's trusted alterations expert.</p>
+  </div>
+</header>
 
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <strong>Phone</strong>
-                        <p><a href="tel:3014489733">301-448-9733</a></p>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Email</strong>
-                        <p><a href="mailto:omalleyfabrics@gmail.com">omalleyfabrics@gmail.com</a></p>
-                    </div>
-                </div>
+<!-- ═══════════════════════════════════════
+     STORY
+═══════════════════════════════════════ -->
+<section class="about-story" aria-labelledby="story-heading">
+  <div class="container">
+    <div class="about-story-grid">
 
-                <a href="https://calendly.com/omalleyfabrics/30min" class="cta-button">Schedule a Consultation</a>
-            </div>
-        </section>
-    </main>
+      <div class="about-story-img">
+        <img src="PICS/mom.jpg" alt="Grainne O'Malley, master seamstress and founder of O'Malley Fabrics" width="480">
+        <p class="img-caption">Grainne O'Malley — Founder &amp; Master Seamstress</p>
+      </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 O'Malley Fabrics. All rights reserved.</p>
-            <p>From County Mayo to the DMV – crafted with heart.</p>
-        </div>
-    </footer>
+      <div class="about-story-text">
+        <span class="eyebrow">Craftsmanship &amp; Heritage</span>
+        <h2 id="story-heading">Craftsmanship Rooted in Heritage</h2>
+
+        <p>Grainne O'Malley grew up in County Mayo, Ireland, surrounded by fine fabrics and the craft of tailoring in her family's beloved fabric store. Inspired by her mother Anne — an accomplished seamstress known for exquisite wedding dresses and bespoke designs — Grainne developed a deep passion for quality textiles and precision garment alteration.</p>
+
+        <p>Now based in Bethesda, Maryland, Grainne brings that same dedication to detail and craftsmanship to every project. She specialises in custom garment alterations that ensure a perfect fit, as well as bespoke home décor solutions including custom curtains and tailored pillows.</p>
+
+        <p><strong>O'Malley Fabrics honours this family legacy of excellence.</strong> Whether you need a professional alteration to perfect your wardrobe, custom window treatments to enhance your home, or decorative pillows to add a refined finishing touch, Grainne works with you to bring your vision to life.</p>
+
+        <p>With meticulous attention to detail and a genuine passion for quality, she is committed to delivering exceptional results on every project, no matter the scale.</p>
+
+        <a href="index.html#contact" class="btn btn-primary" style="margin-top:0.75rem;">Get in Touch</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CALL TO ACTION
+═══════════════════════════════════════ -->
+<section class="about-cta-section" aria-labelledby="cta-heading">
+  <div class="container">
+    <span class="eyebrow">Work With Grainne</span>
+    <h2 id="cta-heading">Let's Create Something Beautiful</h2>
+    <p>Ready to discuss your fabric and sewing project? Reach out to schedule a consultation.</p>
+
+    <div class="about-contact-cards">
+      <div class="about-contact-card">
+        <strong>Phone</strong>
+        <a href="tel:+13014489733">(301) 448-9733</a>
+      </div>
+      <div class="about-contact-card">
+        <strong>Email</strong>
+        <a href="mailto:omalleyfabrics@gmail.com">omalleyfabrics@gmail.com</a>
+      </div>
+    </div>
+
+    <a href="https://calendly.com/omalleyfabrics/30min" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Schedule a Consultation</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <h3>O'Malley Fabrics</h3>
+        <p class="tagline-footer">From County Mayo to the DMV — crafted with heart.</p>
+        <p>Professional alterations, custom curtains, soft furnishings, and sewing lessons serving Washington D.C., Maryland, and Virginia.</p>
+        <a href="https://calendly.com/omalleyfabrics/30min" class="footer-book-btn" target="_blank" rel="noopener noreferrer">Book Now</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="index.html#lessons">Sewing Lessons</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="about.html" class="active">About Grainne</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-contact-list">
+          <li><a href="mailto:omalleyfabrics@gmail.com">omalleyfabrics@gmail.com</a></li>
+          <li><a href="tel:+13014489733">(301) 448-9733</a></li>
+          <li>Washington D.C., Maryland &amp; Virginia</li>
+          <li>By appointment only</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> O'Malley Fabrics. All rights reserved.</p>
+      <p style="margin-top:4px;">Professional Alterations &amp; Sewing Services in the DMV</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const toggle = document.getElementById('navToggle');
+  const links  = document.getElementById('navLinks');
+
+  toggle.addEventListener('click', function () {
+    const open = links.classList.toggle('is-open');
+    toggle.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', open);
+  });
+
+  links.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      links.classList.remove('is-open');
+      toggle.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
 </body>
 </html>

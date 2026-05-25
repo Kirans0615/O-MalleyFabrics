@@ -1,186 +1,427 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="O'Malley Fabrics offers Alterations, Custom Curtains, Soft furnishings, and sewing Lessons across the DMV area. Expert craftsmanship with years of experience."[...]
-    <meta name="keywords" content="alterations, custom curtains, sewing lessons, DMV, Washington DC, Maryland, Virginia">
-    <meta name="author" content="O'Malley Fabrics">
-    <meta property="og:title" content="O'Malley Fabrics - Professional Stitching Solutions in the DMV">
-    <meta property="og:description" content="Expert alterations and sewing services in Washington DC, Maryland, and Virginia">
-    <meta property="og:type" content="business.business">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="O'Malley Fabrics offers professional alterations, custom curtains, soft furnishings, and sewing lessons across Washington D.C., Maryland, and Virginia. Expert craftsmanship rooted in Irish heritage.">
+  <meta name="keywords" content="alterations, custom curtains, soft furnishings, sewing lessons, DMV, Washington DC, Maryland, Virginia">
+  <meta name="author" content="O'Malley Fabrics">
+  <meta property="og:title" content="O'Malley Fabrics – Professional Alterations & Sewing Services in the DMV">
+  <meta property="og:description" content="Expert alterations, curtains, soft furnishings and sewing lessons in Washington DC, Maryland, and Virginia.">
+  <meta property="og:type" content="business.business">
 
-    <title>O'Malley Fabrics - Professional Alterations & Sewing Services in the DMV</title>
+  <title>O'Malley Fabrics – Professional Alterations & Sewing Services in the DMV</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="favicon1.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="favicon1.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<header role="banner">
-    <div class="container">
-        <div class="header-content">
-            <h1>O'Malley Fabrics</h1>
-            <p class="tagline">Professional Alterations & Sewing Services</p>
-        </div>
-        <nav role="navigation" aria-label="Main navigation">
-            <ul>
-                <li>
-                    <a href="index.html" class="active" aria-current="page">Home</a>
-                </li>
-                <li>
-                    <a href="about.html">About Grainne</a>
-                </li>
-            </ul>
-        </nav>
+<!-- ═══════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════ -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <a href="index.html">O'Malley Fabrics</a>
     </div>
-</header>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#lessons">Lessons</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
 <main role="main">
 
-    <!-- HERO SECTION -->
-    <section class="hero" aria-labelledby="hero-heading">
-        <div class="container hero-content-wrapper">
-            <div class="hero-text-content">
-                <h2 id="hero-heading">Expert Alterations, Soft Furnishings & Garment Repairs</h2>
-                <p class="hero-subtitle">Céad Míle Fáilte! Welcome to O'Malley Fabrics.</p>
-                <a href="#services" class="btn btn-primary">Explore Our Work</a>
-            </div>
+<!-- ═══════════════════════════════════════
+     HERO
+═══════════════════════════════════════ -->
+<section class="hero" id="home" aria-labelledby="hero-title">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-welcome">Céad Míle Fáilte</p>
+    <h1 class="hero-title" id="hero-title">O'Malley Fabrics</h1>
+    <div class="hero-divider"></div>
+    <p class="hero-tagline">Professional Alterations and Sewing Services in the DMV</p>
+    <a href="https://calendly.com/omalleyfabrics/30min" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book a Consultation</a>
+  </div>
+</section>
 
-            <div class="hero-images">
-                <img src="PICS/two.jpg" alt="Grainne O'Malley working on custom tailoring" class="hero-img-top">
-                <img src="PICS/OMalleyStore.jpg" alt="O'Malley Fabrics storefront" class="hero-img-bottom">
-            </div>
+<!-- ═══════════════════════════════════════
+     SERVICES
+═══════════════════════════════════════ -->
+<section class="services-section" id="services" aria-labelledby="services-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">What We Offer</span>
+      <h2 id="services-heading">Our Professional Services</h2>
+      <p>From a perfect-fit alteration to custom soft furnishings — every project is handled with precision and care.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- Alterations -->
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <!-- Scissors icon -->
+            <circle cx="6" cy="6" r="3"/>
+            <circle cx="6" cy="18" r="3"/>
+            <line x1="20" y1="4" x2="8.12" y2="15.88"/>
+            <line x1="14.47" y1="14.48" x2="20" y2="20"/>
+            <line x1="8.12" y1="8.12" x2="12" y2="12"/>
+          </svg>
         </div>
-    </section>
+        <h3>Alterations</h3>
+        <p>Expertly adjust and tailor your garments for a perfect fit. From hemming to complex restructuring, each project is handled with precision and care.</p>
+      </article>
 
-    <!-- SERVICES SECTION -->
-    <section id="services" class="services-section" aria-labelledby="services-heading">
-        <div class="container">
-            <h2 id="services-heading">Our Professional Services</h2>
-
-            <div class="service-grid">
-                <article class="service-item">
-                    <h3>Alterations</h3>
-                    <p>Expertly adjust and tailor your garments for a perfect fit and comfortable wear. From hemming to complex restructuring, we handle each project with precision and care.</p>
-                </article>
-
-                <article class="service-item">
-                    <h3>Curtain Creations & Repairs</h3>
-                    <p>From custom-made curtains to professional restoration of existing drapes, we design and craft window treatments that enhance your space with style and functionality.</p>
-                </article>
-
-                <article class="service-item">
-                    <h3>Soft Furnishings</h3>
-                    <p>Custom-designed cushions and expertly revitalized pillows that add comfort and elegance to your home. Transform your interior with our bespoke soft furnishing solutions.</p>
-                </article>
-
-                <article class="service-item">
-                    <h3>Custom Sewing Projects</h3>
-                    <p>Have a unique vision or special project? We will work with  your creative ideas to bring them to life with attention to detail and quality workmanship.</p>
-                </article>
-            </div>
+      <!-- Curtains -->
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <!-- Window/curtain icon -->
+            <rect x="2" y="3" width="20" height="18" rx="1"/>
+            <line x1="2" y1="7" x2="22" y2="7"/>
+            <path d="M7 7 Q9 14 7 21"/>
+            <path d="M17 7 Q15 14 17 21"/>
+          </svg>
         </div>
-    </section>
+        <h3>Curtain Creations &amp; Repairs</h3>
+        <p>Custom-made curtains and professional restoration of existing drapes. We design and craft window treatments that enhance your space with style.</p>
+      </article>
 
-    <!-- SEWING LESSONS SECTION -->
-    <section id="sewing-lessons" class="sewing-lessons-section" aria-labelledby="lessons-heading">
-        <div class="container">
-            <h2 id="lessons-heading">Sewing Lessons</h2>
-            <p class="section-description">Sewing lessons for adults and children to ignite or rekindle the passion for sewing. We offer both small group sewing classes and private lessons. Book a session using our calendar.</p>
-
-            <div class="lessons-info">
-                <div class="lesson-type">
-                    <h3>Small Group Classes</h3>
-                    <p>Learn in a supportive environment with fellow sewing enthusiasts. Our group classes are designed for all skill levels.</p>
-                </div>
-
-                <div class="lesson-type">
-                    <h3>Private Lessons</h3>
-                    <p>Personalized instruction tailored to your pace and interests. Perfect for beginners or those looking to master advanced techniques.</p>
-                </div>
-            </div>
-
-            <a href="https://calendly.com/omalleyfabrics/30min" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book a Sewing Lesson</a>
+      <!-- Soft Furnishings -->
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <!-- Cushion/sofa icon -->
+            <rect x="2" y="10" width="20" height="8" rx="3"/>
+            <rect x="5" y="7" width="14" height="5" rx="2"/>
+            <line x1="5" y1="18" x2="5" y2="21"/>
+            <line x1="19" y1="18" x2="19" y2="21"/>
+          </svg>
         </div>
-    </section>
+        <h3>Soft Furnishings</h3>
+        <p>Custom-designed cushions and expertly revitalised pillows that add comfort and elegance to your home. Transform your interior with bespoke solutions.</p>
+      </article>
 
-    <!-- GALLERY SECTION -->
-    <section class="gallery-section" aria-labelledby="gallery-heading">
-        <div class="container">
-            <h2 id="gallery-heading">GALLERY</h2>
-
-            <div class="gallery-grid">
-                <figure class="gallery-item">
-                    <img src="PICS/KidsStore.jpg" alt="O'Malley family fabric shop in County Mayo, Ireland">
-                    <figcaption>Where it all began: Our Mother's Renowned Fabric Shop in County Mayo, Ireland</figcaption>
-                </figure>
-
-                <figure class="gallery-item gallery-item-before-after">
-                    <div class="before-after-images">
-                        <img src="PICS/before.jpg" alt="Furniture before reupholstery - worn condition">
-                        <img src="PICS/cushion.jpg" alt="Furniture after reupholstery - restored and renewed">
-                    </div>
-                    <figcaption>Furniture Transformation: Before & After Professional Reupholstery</figcaption>
-                </figure>
-
-                <figure class="gallery-item">
-                    <img src="PICS/curtain.jpg" alt="Elegant custom curtain installation in modern living room">
-                    <figcaption>Elegance Unveiled: Custom Curtain Design & Installation</figcaption>
-                </figure>
-
-                <figure class="gallery-item">
-                    <img src="PICS/pillow.jpg" alt="Revitalized decorative pillows in various colors and patterns">
-                    <figcaption>Second Life: Vintage Pillows Expertly Restored & Revitalized</figcaption>
-                </figure>
-            </div>
+      <!-- Custom Sewing -->
+      <article class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <!-- Thread/needle icon -->
+            <path d="M12 2a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4"/>
+            <path d="M9.5 9.5 L4 22"/>
+            <path d="M14.5 9.5 L20 22"/>
+            <line x1="6.5" y1="15.5" x2="17.5" y2="15.5"/>
+          </svg>
         </div>
-    </section>
+        <h3>Custom Sewing Projects</h3>
+        <p>Have a unique vision or special project? We work with your creative ideas to bring them to life with meticulous attention to detail and quality workmanship.</p>
+      </article>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="contact-section" aria-labelledby="contact-heading">
-        <div class="container">
-            <h2 id="contact-heading">Get in Touch</h2>
-            <p class="section-description">Ready to transform your fabrics and furnishings? Contact us today to discuss your project or schedule a professional consultation.</p>
+    </div>
+  </div>
+</section>
 
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <h3>Email</h3>
-                    <a href="mailto:omalleyfabrics@gmail.com" class="contact-link">omalleyfabrics@gmail.com</a>
-                </div>
+<!-- ═══════════════════════════════════════
+     ORIGIN STORY
+═══════════════════════════════════════ -->
+<section class="origin-section" aria-labelledby="origin-heading">
+  <div class="container">
+    <div class="origin-grid">
+      <div class="origin-image">
+        <img src="PICS/KidsStore.jpg" alt="The O'Malley family fabric shop in County Mayo, Ireland" width="580" height="400" loading="lazy">
+        <p class="origin-caption">The O'Malley family fabric shop, County Mayo, Ireland</p>
+      </div>
+      <div class="origin-text">
+        <span class="eyebrow">Our Story</span>
+        <h2 id="origin-heading">Craftsmanship Rooted in Heritage</h2>
+        <p>Grainne O'Malley grew up surrounded by fine fabrics and the craft of tailoring in her family's beloved fabric store in County Mayo, Ireland. Inspired by her mother Anne — an accomplished seamstress renowned for exquisite wedding dresses and bespoke designs — Grainne developed a lifelong passion for quality textiles and precision garment work.</p>
+        <p>Now based in Bethesda, Maryland, Grainne brings that same dedication and craftsmanship to every project in the DMV. <strong>O'Malley Fabrics honours this family legacy of excellence</strong>, from the rolling hills of Connacht to the homes and wardrobes of Washington D.C., Maryland, and Virginia.</p>
+        <a href="about.html" class="btn btn-outline-gold" style="margin-top:0.5rem;">Meet Grainne</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-                <div class="contact-item">
-                    <h3>Phone</h3>
-                    <a href="tel:+13014489733" class="contact-link">(301) 448-9733</a>
-                </div>
+<!-- ═══════════════════════════════════════
+     GALLERY
+═══════════════════════════════════════ -->
+<section class="gallery-section" id="gallery" aria-labelledby="gallery-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Our Work</span>
+      <h2 id="gallery-heading">Gallery</h2>
+      <p>A glimpse of the craftsmanship and care we bring to every project.</p>
+    </div>
 
-                <div class="contact-item">
-                    <h3>Service Area</h3>
-                    <p>Washington D.C., Maryland & Virginia</p>
-                    <p class="note">By appointment only</p>
-                </div>
-            </div>
+    <div class="gallery-grid">
 
-            <p class="consultation-note">Our consultations are complimentary and allow us to understand your unique needs and provide personalized recommendations.</p>
+      <!-- KidsStore -->
+      <figure class="gallery-item">
+        <img src="PICS/KidsStore.jpg" alt="The O'Malley family fabric shop in County Mayo, Ireland" width="400" height="230" loading="lazy">
+        <figcaption class="gallery-caption">Where it all began: Our mother's fabric shop, County Mayo, Ireland</figcaption>
+      </figure>
 
-            <a href="https://calendly.com/omalleyfabrics/30min" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Schedule Your Consultation</a>
+      <!-- Before & After -->
+      <figure class="gallery-item" aria-label="Furniture transformation: before and after reupholstery">
+        <div class="before-after-wrap">
+          <div class="before-after-side">
+            <span class="ba-label">Before</span>
+            <img src="PICS/before.jpg" alt="Furniture before reupholstery — worn condition" width="200" height="230" loading="lazy">
+          </div>
+          <div class="before-after-side">
+            <span class="ba-label">After</span>
+            <img src="PICS/cushion.jpg" alt="Furniture after reupholstery — beautifully restored" width="200" height="230" loading="lazy">
+          </div>
         </div>
-    </section>
+        <figcaption class="gallery-caption">Furniture Transformation: Before &amp; After Professional Reupholstery</figcaption>
+      </figure>
+
+      <!-- Curtain -->
+      <figure class="gallery-item">
+        <img src="PICS/curtain.jpg" alt="Elegant custom curtain installation in a modern living room" width="400" height="230" loading="lazy">
+        <figcaption class="gallery-caption">Elegance Unveiled: Custom Curtain Design &amp; Installation</figcaption>
+      </figure>
+
+      <!-- Pillow -->
+      <figure class="gallery-item">
+        <img src="PICS/pillow.jpg" alt="Expertly revitalised decorative pillows" width="400" height="230" loading="lazy">
+        <figcaption class="gallery-caption">Second Life: Vintage Pillows Expertly Restored &amp; Revitalised</figcaption>
+      </figure>
+
+      <!-- Table curtain -->
+      <figure class="gallery-item">
+        <img src="PICS/tablecurtain.jpg" alt="Custom table curtain and fabric work" width="400" height="230" loading="lazy">
+        <figcaption class="gallery-caption">Custom Fabric Work: Table Curtain &amp; Soft Furnishing Detail</figcaption>
+      </figure>
+
+      <!-- Store / Work -->
+      <figure class="gallery-item">
+        <img src="PICS/OMalleyStore.jpg" alt="O'Malley Fabrics — bringing County Mayo craftsmanship to the DMV" width="400" height="230" loading="lazy">
+        <figcaption class="gallery-caption">O'Malley Fabrics — bringing County Mayo craftsmanship to the DMV</figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SEWING LESSONS
+═══════════════════════════════════════ -->
+<section class="lessons-section" id="lessons" aria-labelledby="lessons-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Learn to Sew</span>
+      <h2 id="lessons-heading">Sewing Lessons</h2>
+      <p>Sewing lessons for adults and children — to ignite or rekindle the passion for the craft. All skill levels welcome.</p>
+    </div>
+
+    <div class="lessons-grid">
+
+      <div class="lesson-card">
+        <div class="lesson-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <!-- Group/people icon -->
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3>Small Group Classes</h3>
+        <p>Learn in a supportive, sociable environment alongside fellow sewing enthusiasts. Our group classes are designed for all skill levels — from complete beginners to those looking to build confidence with new techniques.</p>
+      </div>
+
+      <div class="lesson-card">
+        <div class="lesson-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <!-- Single person / star icon -->
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <h3>Private Lessons</h3>
+        <p>Personalised, one-on-one instruction tailored entirely to your pace, interests, and goals. Perfect for beginners seeking individual attention, or experienced sewers looking to master advanced techniques.</p>
+      </div>
+
+    </div>
+
+    <div class="lessons-cta">
+      <a href="https://calendly.com/omalleyfabrics/30min" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book a Sewing Lesson</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CONTACT
+═══════════════════════════════════════ -->
+<section class="contact-section" id="contact" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <span class="eyebrow">Get in Touch</span>
+        <h2 id="contact-heading">Let's Talk About Your Project</h2>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <h4>Email</h4>
+            <a href="mailto:omalleyfabrics@gmail.com">omalleyfabrics@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <h4>Phone</h4>
+            <a href="tel:+13014489733">(301) 448-9733</a>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <h4>Service Area</h4>
+            <p>Washington D.C., Maryland &amp; Virginia</p>
+            <p class="contact-note-text">By appointment only</p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="contact-detail-text">
+            <h4>Consultations</h4>
+            <p>Complimentary initial consultation</p>
+            <p class="contact-note-text">We'll discuss your project and provide personalised recommendations.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-cta-card">
+        <span class="eyebrow" style="display:block;margin-bottom:0.5rem;">Ready to Begin?</span>
+        <h3>Schedule Your Consultation</h3>
+        <p>Book a free, no-obligation consultation and let us help you bring your vision to life — whether it's a garment alteration, custom curtains, or a special sewing project.</p>
+        <a href="https://calendly.com/omalleyfabrics/30min" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Book Online via Calendly</a>
+        <span class="cta-subtext">Complimentary &amp; no obligation</span>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 </main>
 
+<!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
 <footer role="contentinfo">
-    <div class="container">
-        <p>&copy; <span id="year">2025</span> O'Malley Fabrics. All rights reserved.</p>
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <h3>O'Malley Fabrics</h3>
+        <p class="tagline-footer">From County Mayo to the DMV — crafted with heart.</p>
+        <p>Professional alterations, custom curtains, soft furnishings, and sewing lessons serving Washington D.C., Maryland, and Virginia.</p>
+        <a href="https://calendly.com/omalleyfabrics/30min" class="footer-book-btn" target="_blank" rel="noopener noreferrer">Book Now</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#lessons">Sewing Lessons</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="about.html">About Grainne</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-contact-list">
+          <li><a href="mailto:omalleyfabrics@gmail.com">omalleyfabrics@gmail.com</a></li>
+          <li><a href="tel:+13014489733">(301) 448-9733</a></li>
+          <li>Washington D.C., Maryland &amp; Virginia</li>
+          <li>By appointment only</li>
+        </ul>
+      </div>
+
     </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> O'Malley Fabrics. All rights reserved.</p>
+      <p style="margin-top:4px;">Professional Alterations &amp; Sewing Services in the DMV</p>
+    </div>
+  </div>
 </footer>
 
 <script>
-    // Auto-update copyright year
-    document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Hamburger nav toggle
+  const toggle = document.getElementById('navToggle');
+  const links  = document.getElementById('navLinks');
+
+  toggle.addEventListener('click', function () {
+    const open = links.classList.toggle('is-open');
+    toggle.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', open);
+  });
+
+  // Close mobile nav when a link is clicked
+  links.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      links.classList.remove('is-open');
+      toggle.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Active nav link on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  window.addEventListener('scroll', function () {
+    let current = '';
+    sections.forEach(function (section) {
+      if (window.scrollY >= section.offsetTop - 100) {
+        current = section.getAttribute('id');
+      }
+    });
+    navLinks.forEach(function (a) {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + current) {
+        a.classList.add('active');
+      }
+    });
+  }, { passive: true });
 </script>
 
 </body>
