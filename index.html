@@ -165,7 +165,7 @@ section{padding:96px 0}
 .heritage .sec-head p{color:rgba(239,235,224,.8)}
 .her-grid{display:grid;grid-template-columns:1fr 110px 1fr;align-items:stretch}
 .her-card{background:rgba(239,235,224,.05);border:1px solid rgba(239,235,224,.18);overflow:hidden}
-.her-card-img{width:100%;height:220px;object-fit:cover;object-position:center;display:block;filter:sepia(10%) brightness(.9)}
+.her-card-img{width:100%;height:260px;object-fit:cover;object-position:center top;display:block;filter:sepia(10%) brightness(.9)}
 .her-card-body{padding:32px 34px 38px}
 .her-card .flag{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--thread)}
 .her-card h3{font-size:30px;margin:12px 0 6px}
@@ -198,11 +198,12 @@ section{padding:96px 0}
 .port-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .port-item{border:1px solid rgba(34,37,31,.18);background:var(--white);overflow:hidden;transition:box-shadow .35s}
 .port-item:hover{box-shadow:0 14px 32px rgba(20,53,42,.18)}
-.port-item img{width:100%;height:240px;object-fit:cover;display:block;transition:transform .5s;filter:sepia(5%)}
+.port-item .port-img{width:100%;aspect-ratio:4/3;overflow:hidden}
+.port-item img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .5s;filter:sepia(5%)}
 .port-item:hover img{transform:scale(1.04)}
 .port-item figcaption{padding:12px 14px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--bottle)}
 .port-item.port-wide{grid-column:span 2}
-.port-item.port-wide img{height:340px}
+.port-item.port-wide .port-img{aspect-ratio:16/9}
 
 /* fabric library swatches */
 .swatch-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
@@ -308,7 +309,7 @@ footer a:hover{color:var(--thread);border-bottom-color:var(--thread)}
   .proc-grid::before{display:none}
   .foot-grid{grid-template-columns:1fr 1fr}
   .port-item.port-wide{grid-column:span 1}
-  .port-item.port-wide img{height:240px}
+  .port-item.port-wide .port-img{aspect-ratio:4/3}
 }
 @media(max-width:860px){
   .hero-grid{grid-template-columns:1fr;padding-bottom:64px}
@@ -427,22 +428,25 @@ footer a:hover{color:var(--thread);border-bottom-color:var(--thread)}
       <article class="svc reveal">
         <span class="num">i.</span>
         <h3>Alterations</h3>
-        <p>Hems, waists, sleeves, and tapering for everyday and professional wear.</p>
-        <span class="from">From</span><div class="price">$18</div>
+        <p>Hems, waists, sleeves, and straps for everyday and professional wear.</p>
+        <span class="from">From</span><div class="price">$20</div>
         <ul>
-          <li>Pant hem <b>$18</b></li>
-          <li>Waist in/out <b>$28</b></li>
-          <li>Sleeve shorten <b>$32</b></li>
-          <li>Shirt tapering <b>$35</b></li>
+          <li>Pants hem <b>$20</b></li>
+          <li>Jeans hem (orig.) <b>$25</b></li>
+          <li>Skirt / dress hem <b>$30</b></li>
+          <li>Waist in / out <b>$35</b></li>
+          <li>Sleeve shortening <b>$35</b></li>
+          <li>Strap adjustment <b>$25</b></li>
         </ul>
       </article>
       <article class="svc reveal">
         <span class="num">ii.</span>
         <h3>Bridal &amp; Formal</h3>
         <p>Wedding gowns, bridesmaids, suits, and bustles — fitted over two to three sessions.</p>
-        <span class="from">From</span><div class="price">$150</div>
+        <span class="from">From</span><div class="price">$50</div>
         <ul>
-          <li>Gown hem <b>$150+</b></li>
+          <li>Formal dress hem <b>$50+</b></li>
+          <li>Bridal gown hem <b>$150+</b></li>
           <li>Bodice take-in <b>$120+</b></li>
           <li>Bustle (French) <b>$85</b></li>
           <li>Suit full fit <b>$160+</b></li>
@@ -452,23 +456,25 @@ footer a:hover{color:var(--thread);border-bottom-color:var(--thread)}
         <span class="num">iii.</span>
         <h3>Bespoke</h3>
         <p>Made-to-measure garments cut from cloth we choose together — including Irish linen and tweed sourced through my mother's shop.</p>
-        <span class="from">From</span><div class="price">$280</div>
+        <span class="from">From</span><div class="price">$240</div>
         <ul>
+          <li>Christening gown <b>$240+</b></li>
           <li>Linen dress <b>$280+</b></li>
           <li>Tweed waistcoat <b>$320+</b></li>
-          <li>Christening gown <b>$240+</b></li>
         </ul>
       </article>
       <article class="svc reveal">
         <span class="num">iv.</span>
         <h3>Repair &amp; Restore</h3>
-        <p>Invisible mending, zipper replacement, relining, and the careful revival of heirloom pieces.</p>
-        <span class="from">From</span><div class="price">$15</div>
+        <p>Buttons, patches, elastic, zippers, relining, and the careful revival of heirloom pieces.</p>
+        <span class="from">From</span><div class="price">$3</div>
         <ul>
+          <li>Button replacement <b>$3 ea.</b></li>
+          <li>Patches <b>$5–25</b></li>
+          <li>Replace elastic <b>$30</b></li>
           <li>Zipper replace <b>$25+</b></li>
           <li>Invisible mend <b>$30+</b></li>
           <li>Jacket reline <b>$95+</b></li>
-          <li>Heirloom restore <b>quote</b></li>
         </ul>
       </article>
     </div>
@@ -542,31 +548,31 @@ footer a:hover{color:var(--thread);border-bottom-color:var(--thread)}
     </div>
     <div class="port-grid">
       <figure class="port-item port-wide reveal">
-        <img src="PICS/curtain.jpg" alt="Custom linen curtains, made to measure" loading="lazy">
+        <div class="port-img"><img src="PICS/curtain.jpg" alt="Custom linen curtains, made to measure" loading="lazy" style="object-position:center top"></div>
         <figcaption>Made-to-Measure Curtains</figcaption>
       </figure>
       <figure class="port-item reveal">
-        <img src="PICS/pillow.jpg" alt="Bespoke decorative pillow" loading="lazy">
+        <div class="port-img"><img src="PICS/pillow.jpg" alt="Bespoke decorative pillow" loading="lazy" style="object-position:center center"></div>
         <figcaption>Bespoke Pillow</figcaption>
       </figure>
       <figure class="port-item reveal">
-        <img src="PICS/cushion.jpg" alt="Custom cushion cover" loading="lazy">
+        <div class="port-img"><img src="PICS/cushion.jpg" alt="Custom cushion cover" loading="lazy" style="object-position:center center"></div>
         <figcaption>Custom Cushion</figcaption>
       </figure>
       <figure class="port-item reveal">
-        <img src="PICS/windowpillow.jpg" alt="Window seat pillow" loading="lazy">
+        <div class="port-img"><img src="PICS/windowpillow.jpg" alt="Window seat pillow" loading="lazy" style="object-position:center top"></div>
         <figcaption>Window Seat Pillow</figcaption>
       </figure>
       <figure class="port-item reveal">
-        <img src="PICS/tablecurtain.jpg" alt="Table runner and curtain in coordinating fabric" loading="lazy">
+        <div class="port-img"><img src="PICS/tablecurtain.jpg" alt="Table runner and curtain in coordinating fabric" loading="lazy" style="object-position:center top"></div>
         <figcaption>Coordinated Table &amp; Curtain</figcaption>
       </figure>
       <figure class="port-item port-wide reveal">
-        <img src="PICS/two.jpg" alt="Pair of finished custom pieces" loading="lazy">
+        <div class="port-img"><img src="PICS/two.jpg" alt="Pair of finished custom pieces" loading="lazy" style="object-position:center center"></div>
         <figcaption>Paired Commission</figcaption>
       </figure>
       <figure class="port-item reveal">
-        <img src="PICS/before.jpg" alt="Before restoration — heirloom garment brought in for repair" loading="lazy">
+        <div class="port-img"><img src="PICS/before.jpg" alt="Before restoration — heirloom garment brought in for repair" loading="lazy" style="object-position:center top"></div>
         <figcaption>Before Restoration</figcaption>
       </figure>
     </div>
@@ -661,12 +667,18 @@ footer a:hover{color:var(--thread);border-bottom-color:var(--thread)}
               <label for="fService">Service</label>
               <select id="fService" required>
                 <option value="">Choose a service…</option>
-                <option value="hem" data-price="18">Pant / skirt hem — $18</option>
-                <option value="waist" data-price="28">Waist in or out — $28</option>
-                <option value="sleeve" data-price="32">Sleeve shorten — $32</option>
-                <option value="taper" data-price="35">Shirt tapering — $35</option>
+                <option value="panthem" data-price="20">Pants hem — $20</option>
+                <option value="jeanhem" data-price="25">Jeans hem (original hem) — $25</option>
+                <option value="skirtem" data-price="30">Skirt / dress hem — $30</option>
+                <option value="waist" data-price="35">Waist in or out — $35</option>
+                <option value="sleeve" data-price="35">Sleeve shortening — $35</option>
+                <option value="strap" data-price="25">Strap adjustment — $25</option>
+                <option value="elastic" data-price="30">Replace elastic — $30</option>
+                <option value="button" data-price="3">Button replacement — $3 each</option>
+                <option value="patch" data-price="5">Patches — $5–25</option>
                 <option value="zipper" data-price="25">Zipper replacement — $25+</option>
                 <option value="mend" data-price="30">Invisible mending — $30+</option>
+                <option value="formalhem" data-price="50">Formal dress hem — $50+</option>
                 <option value="gownhem" data-price="150">Bridal gown hem — $150+</option>
                 <option value="bodice" data-price="120">Bodice take-in — $120+</option>
                 <option value="bustle" data-price="85">Bustle — $85</option>
