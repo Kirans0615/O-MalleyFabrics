@@ -252,6 +252,17 @@ section{padding:96px 0}
 .testi-dots button{width:9px;height:9px;border-radius:50%;border:1px solid var(--bottle);background:transparent;cursor:pointer;padding:0}
 .testi-dots button.on{background:var(--thread);border-color:var(--thread)}
 
+/* service checkboxes */
+.svc-checks{border:1px solid rgba(34,37,31,.28);background:var(--linen);max-height:280px;overflow-y:auto;position:relative;z-index:1}
+.svc-check-group{}
+.svc-check-head{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--thread-2);padding:10px 14px 6px;background:rgba(34,37,31,.07);position:sticky;top:0}
+.svc-check-item{display:flex;align-items:center;gap:10px;padding:9px 14px;font-size:14px;cursor:pointer;border-top:1px dashed rgba(34,37,31,.14);transition:background .2s}
+.svc-check-item:hover{background:rgba(34,37,31,.05)}
+.svc-check-item input[type="checkbox"]{flex-shrink:0;accent-color:var(--bottle);width:15px;height:15px;cursor:pointer}
+/* file input */
+.field input[type="file"]{padding:10px 14px;cursor:pointer;background:var(--linen);border:1px solid rgba(34,37,31,.28);font-size:14px}
+.field input[type="file"]::-webkit-file-upload-button,.field input[type="file"]::file-selector-button{font-family:var(--sans);font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;background:var(--bottle);color:var(--white);border:none;padding:8px 16px;margin-right:14px;cursor:pointer}
+
 /* booking */
 .book-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 .form-card{background:var(--white);border:1px solid rgba(34,37,31,.18);padding:40px;position:relative}
@@ -707,7 +718,7 @@ footer a:hover{color:var(--thread);border-bottom-color:var(--thread)}
     <div class="sec-head reveal">
       <span class="label-tag"><span class="lt-x">✦</span> Book a Fitting <span class="lt-x">✦</span></span>
       <h2>Let's get it pinned.</h2>
-      <p>Pick a service and see a live estimate, then request your fitting. I confirm every appointment personally within one business day.</p>
+      <p>Tick the services you need and see a live estimate, then send your request. I'll be in touch within one business day to confirm.</p>
     </div>
     <div class="book-grid">
       <div class="form-card reveal">
@@ -729,70 +740,55 @@ footer a:hover{color:var(--thread);border-bottom-color:var(--thread)}
             <input id="fEmail" type="email" autocomplete="email" required>
             <div class="err">Please enter a valid email.</div>
           </div>
-          <div class="field-row">
-            <div class="field" data-field>
-              <label for="fService">Service</label>
-              <select id="fService" required>
-                <option value="">Choose a service…</option>
-                <optgroup label="Alterations">
-                  <option value="panthem" data-price="20">Pants hem — $20</option>
-                  <option value="jeanhem" data-price="25">Jeans hem (original hem) — $25</option>
-                  <option value="skirthem" data-price="30">Skirt / dress hem — $30</option>
-                  <option value="waist" data-price="35">Waist in or out — $35</option>
-                  <option value="sleeve" data-price="35">Sleeve shortening — $35</option>
-                  <option value="strap" data-price="25">Strap adjustment — $25</option>
-                </optgroup>
-                <optgroup label="Soft Furnishings">
-                  <option value="pillowcover" data-price="20">Pillow / cushion cover — $20+</option>
-                  <option value="curtainhem" data-price="25">Curtain hem (per panel) — $25+</option>
-                  <option value="curtainmtm" data-price="40">Curtain made to measure — $40+</option>
-                  <option value="romanblind" data-price="60">Roman blind — $60+</option>
-                  <option value="tablerunner" data-price="30">Table runner — $30+</option>
-                </optgroup>
-                <optgroup label="Formal Wear">
-                  <option value="formalhem" data-price="50">Formal dress hem — $50+</option>
-                  <option value="trouser" data-price="35">Trouser alterations — $35+</option>
-                  <option value="jacket" data-price="80">Jacket take-in — $80+</option>
-                  <option value="suit" data-price="160">Suit full fit — $160+</option>
-                </optgroup>
-                <optgroup label="Repair &amp; Restore">
-                  <option value="button" data-price="3">Button replacement — $3 each</option>
-                  <option value="patch" data-price="5">Patches — $5–25</option>
-                  <option value="elastic" data-price="30">Replace elastic — $30</option>
-                  <option value="zipper" data-price="25">Zipper replacement — $25+</option>
-                  <option value="mend" data-price="30">Invisible mending — $30+</option>
-                  <option value="reline" data-price="95">Jacket reline — $95+</option>
-                </optgroup>
-              </select>
-              <div class="err">Please choose a service.</div>
+          <div class="field" data-field>
+            <label>Services <span style="font-weight:300;text-transform:none;letter-spacing:0;font-size:12px">(tick all that apply)</span></label>
+            <div class="svc-checks" id="fServices">
+              <div class="svc-check-group">
+                <div class="svc-check-head">Alterations</div>
+                <label class="svc-check-item"><input type="checkbox" data-price="20"> Pants hem — $20</label>
+                <label class="svc-check-item"><input type="checkbox" data-price="25"> Jeans hem (original hem) — $25</label>
+                <label class="svc-check-item"><input type="checkbox" data-price="30"> Skirt / dress hem — $30</label>
+                <label class="svc-check-item"><input type="checkbox" data-price="35"> Waist in or out — $35</label>
+                <label class="svc-check-item"><input type="checkbox" data-price="35"> Sleeve shortening — $35</label>
+                <label class="svc-check-item"><input type="checkbox" data-price="25"> Strap adjustment — $25</label>
+              </div>
+              <div class="svc-check-group">
+                <div class="svc-check-head">Soft Furnishings</div>
+                <label class="svc-check-item"><input type="checkbox" data-price="20"> Pillow / cushion cover — $20+</label>
+                <label class="svc-check-item"><input type="checkbox" data-price="25"> Curtain hem (per panel) — $25+</label>
+                <label class="svc-check-item"><input type="checkbox" data-price="40"> Curtain made to measure — $40+</label>
+                <label class="svc-check-item"><input type="checkbox" data-price="60"> Roman blind — $60+</label>
+                <label class="svc-check-item"><input type="checkbox" data-price="30"> Table runner — $30+</label>
+              </div>
+              <div class="svc-check-group">
+                <div class="svc-check-head">Formal Wear</div>
+                <label class="svc-check-item"><input type="checkbox" data-price="50"> Formal dress hem — $50+</label>
+                <label class="svc-check-item"><input type="checkbox" data-price="35"> Trouser alterations — $35+</label>
+                <label class="svc-check-item"><input type="checkbox" data-price="80"> Jacket take-in — $80+</label>
+                <label class="svc-check-item"><input type="checkbox" data-price="160"> Suit full fit — $160+</label>
+              </div>
+              <div class="svc-check-group">
+                <div class="svc-check-head">Repair &amp; Restore</div>
+                <label class="svc-check-item"><input type="checkbox" data-price="3"> Button replacement — $3 each</label>
+                <label class="svc-check-item"><input type="checkbox" data-price="5"> Patches — $5–25</label>
+                <label class="svc-check-item"><input type="checkbox" data-price="30"> Replace elastic — $30</label>
+                <label class="svc-check-item"><input type="checkbox" data-price="25"> Zipper replacement — $25+</label>
+                <label class="svc-check-item"><input type="checkbox" data-price="30"> Invisible mending — $30+</label>
+                <label class="svc-check-item"><input type="checkbox" data-price="95"> Jacket reline — $95+</label>
+              </div>
             </div>
-            <div class="field" data-field>
-              <label for="fQty">Number of garments</label>
-              <select id="fQty">
-                <option value="1">1</option><option value="2">2</option><option value="3">3</option>
-                <option value="4">4</option><option value="5">5+</option>
-              </select>
-            </div>
-          </div>
-          <div class="field-row">
-            <div class="field" data-field>
-              <label for="fDate">Preferred date</label>
-              <input id="fDate" type="date" required>
-              <div class="err">Please pick a future date.</div>
-            </div>
-            <div class="field">
-              <label for="fTime">Preferred time</label>
-              <select id="fTime">
-                <option>Morning (9–12)</option><option>Afternoon (12–4)</option><option>Evening (4–7)</option>
-              </select>
-            </div>
+            <div class="err" id="fServicesErr">Please select at least one service.</div>
           </div>
           <div class="field">
             <label class="check"><input type="checkbox" id="fRush"> Rush service (+50%, ready in 48 hours when possible)</label>
           </div>
           <div class="field">
-            <label for="fNotes">Notes — tell me about the garment</label>
-            <textarea id="fNotes" placeholder="e.g. Navy bridesmaid dress, hem up about 2 inches, event on the 24th…"></textarea>
+            <label for="fNotes">Notes — tell me about the work</label>
+            <textarea id="fNotes" placeholder="e.g. Jacket take-in at the waist and two buttons replaced on the sleeve — navy wool…"></textarea>
+          </div>
+          <div class="field">
+            <label for="fAttach">Attach a photo (optional)</label>
+            <input id="fAttach" type="file" accept="image/*,.pdf" multiple>
           </div>
           <div class="estimate">
             <span>Estimated total<small>Final price confirmed at fitting</small></span>
@@ -980,24 +976,22 @@ footer a:hover{color:var(--thread);border-bottom-color:var(--thread)}
     });
   });
 
-  /* price estimator */
-  var svc = document.getElementById('fService'), qty = document.getElementById('fQty'),
-      rush = document.getElementById('fRush'), out = document.getElementById('estOut');
+  /* price estimator — sums all checked services */
+  var rush = document.getElementById('fRush'), out = document.getElementById('estOut');
   function estimate(){
-    var opt = svc.options[svc.selectedIndex];
-    var base = opt ? parseFloat(opt.getAttribute('data-price')) : NaN;
-    if(isNaN(base)){ out.textContent = '$—'; return; }
-    var n = parseInt(qty.value, 10) || 1;
-    var total = base * n;
-    if(rush.checked) total *= 1.5;
-    out.textContent = '$' + Math.round(total) + (svc.value === 'bespoke' || /\+/.test(opt.textContent) ? '+' : '');
+    var checked = document.querySelectorAll('#fServices input[type="checkbox"]:checked');
+    if(!checked.length){ out.textContent = '$—'; return; }
+    var total = 0, hasPlus = false;
+    checked.forEach(function(cb){
+      var p = parseFloat(cb.getAttribute('data-price'));
+      if(!isNaN(p)) total += p;
+      if(/\+/.test(cb.parentElement.textContent)) hasPlus = true;
+    });
+    if(rush.checked) total = Math.round(total * 1.5);
+    out.textContent = '$' + Math.round(total) + (hasPlus ? '+' : '');
   }
-  [svc, qty, rush].forEach(function(el){ el.addEventListener('change', estimate); });
-
-  /* date min = tomorrow */
-  var dateIn = document.getElementById('fDate');
-  var t = new Date(); t.setDate(t.getDate()+1);
-  dateIn.min = t.toISOString().split('T')[0];
+  document.getElementById('fServices').addEventListener('change', estimate);
+  rush.addEventListener('change', estimate);
 
   /* form validation + success */
   var form = document.getElementById('bookForm');
@@ -1012,24 +1006,29 @@ footer a:hover{color:var(--thread);border-bottom-color:var(--thread)}
     ok = setInvalid(document.getElementById('fPhone'), document.getElementById('fPhone').value.replace(/\D/g,'').length < 7) && ok;
     var em = document.getElementById('fEmail');
     ok = setInvalid(em, !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value)) && ok;
-    ok = setInvalid(svc, !svc.value) && ok;
-    ok = setInvalid(dateIn, !dateIn.value || dateIn.value < dateIn.min) && ok;
+    var anyChecked = !!document.querySelector('#fServices input[type="checkbox"]:checked');
+    var svcsField = document.getElementById('fServices').closest('.field');
+    svcsField.classList.toggle('invalid', !anyChecked);
+    document.getElementById('fServicesErr').style.display = anyChecked ? 'none' : 'block';
+    if(!anyChecked) ok = false;
     if(!ok){
-      var firstBad = form.querySelector('.field.invalid input, .field.invalid select');
+      var firstBad = form.querySelector('.field.invalid input');
       if(firstBad) firstBad.focus();
       return;
     }
     var name = document.getElementById('fName').value.trim().split(' ')[0];
-    var when = new Date(dateIn.value + 'T12:00:00').toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric'});
     document.getElementById('successMsg').textContent =
-      'Thanks, ' + name + ' — I\'ll confirm your ' + document.getElementById('fTime').value.toLowerCase() +
-      ' fitting on ' + when + ' by text or email within one business day.';
+      'Thanks, ' + name + ' — I\'ll be in touch by text or email within one business day to confirm.';
     form.style.display = 'none';
     document.getElementById('formSuccess').classList.add('show');
   });
   form.addEventListener('input', function(e){
     var f = e.target.closest('.field');
     if(f) f.classList.remove('invalid');
+  });
+  document.getElementById('fServices').addEventListener('change', function(){
+    document.getElementById('fServices').closest('.field').classList.remove('invalid');
+    document.getElementById('fServicesErr').style.display = 'none';
   });
 
   /* footer year */
