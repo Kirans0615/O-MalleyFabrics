@@ -722,22 +722,24 @@ footer a:hover{color:var(--thread);border-bottom-color:var(--thread)}
     </div>
     <div class="book-grid">
       <div class="form-card reveal">
-        <form id="bookForm" novalidate>
+        <form id="bookForm" name="booking" netlify netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="booking">
+          <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
           <div class="field-row">
             <div class="field" data-field>
               <label for="fName">Full name</label>
-              <input id="fName" type="text" autocomplete="name" required>
+              <input id="fName" name="name" type="text" autocomplete="name" required>
               <div class="err">Please enter your name.</div>
             </div>
             <div class="field" data-field>
               <label for="fPhone">Phone</label>
-              <input id="fPhone" type="tel" autocomplete="tel" inputmode="tel" required>
+              <input id="fPhone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
               <div class="err">Please enter a phone number.</div>
             </div>
           </div>
           <div class="field" data-field>
             <label for="fEmail">Email</label>
-            <input id="fEmail" type="email" autocomplete="email" required>
+            <input id="fEmail" name="email" type="email" autocomplete="email" required>
             <div class="err">Please enter a valid email.</div>
           </div>
           <div class="field" data-field>
@@ -745,50 +747,50 @@ footer a:hover{color:var(--thread);border-bottom-color:var(--thread)}
             <div class="svc-checks" id="fServices">
               <div class="svc-check-group">
                 <div class="svc-check-head">Alterations</div>
-                <label class="svc-check-item"><input type="checkbox" data-price="20"> Pants hem — $20</label>
-                <label class="svc-check-item"><input type="checkbox" data-price="25"> Jeans hem (original hem) — $25</label>
-                <label class="svc-check-item"><input type="checkbox" data-price="30"> Skirt / dress hem — $30</label>
-                <label class="svc-check-item"><input type="checkbox" data-price="35"> Waist in or out — $35</label>
-                <label class="svc-check-item"><input type="checkbox" data-price="35"> Sleeve shortening — $35</label>
-                <label class="svc-check-item"><input type="checkbox" data-price="25"> Strap adjustment — $25</label>
+                <label class="svc-check-item"><input type="checkbox" name="services" value="Pants hem — $20" data-price="20"> Pants hem — $20</label>
+                <label class="svc-check-item"><input type="checkbox" name="services" value="Jeans hem (original hem) — $25" data-price="25"> Jeans hem (original hem) — $25</label>
+                <label class="svc-check-item"><input type="checkbox" name="services" value="Skirt / dress hem — $30" data-price="30"> Skirt / dress hem — $30</label>
+                <label class="svc-check-item"><input type="checkbox" name="services" value="Waist in or out — $35" data-price="35"> Waist in or out — $35</label>
+                <label class="svc-check-item"><input type="checkbox" name="services" value="Sleeve shortening — $35" data-price="35"> Sleeve shortening — $35</label>
+                <label class="svc-check-item"><input type="checkbox" name="services" value="Strap adjustment — $25" data-price="25"> Strap adjustment — $25</label>
               </div>
               <div class="svc-check-group">
                 <div class="svc-check-head">Soft Furnishings</div>
-                <label class="svc-check-item"><input type="checkbox" data-price="20"> Pillow / cushion cover — $20+</label>
-                <label class="svc-check-item"><input type="checkbox" data-price="25"> Curtain hem (per panel) — $25+</label>
-                <label class="svc-check-item"><input type="checkbox" data-price="40"> Curtain made to measure — $40+</label>
-                <label class="svc-check-item"><input type="checkbox" data-price="60"> Roman blind — $60+</label>
-                <label class="svc-check-item"><input type="checkbox" data-price="30"> Table runner — $30+</label>
+                <label class="svc-check-item"><input type="checkbox" name="services" value="Pillow / cushion cover — $20+" data-price="20"> Pillow / cushion cover — $20+</label>
+                <label class="svc-check-item"><input type="checkbox" name="services" value="Curtain hem per panel — $25+" data-price="25"> Curtain hem (per panel) — $25+</label>
+                <label class="svc-check-item"><input type="checkbox" name="services" value="Curtain made to measure — $40+" data-price="40"> Curtain made to measure — $40+</label>
+                <label class="svc-check-item"><input type="checkbox" name="services" value="Roman blind — $60+" data-price="60"> Roman blind — $60+</label>
+                <label class="svc-check-item"><input type="checkbox" name="services" value="Table runner — $30+" data-price="30"> Table runner — $30+</label>
               </div>
               <div class="svc-check-group">
                 <div class="svc-check-head">Formal Wear</div>
-                <label class="svc-check-item"><input type="checkbox" data-price="50"> Formal dress hem — $50+</label>
-                <label class="svc-check-item"><input type="checkbox" data-price="35"> Trouser alterations — $35+</label>
-                <label class="svc-check-item"><input type="checkbox" data-price="80"> Jacket take-in — $80+</label>
-                <label class="svc-check-item"><input type="checkbox" data-price="160"> Suit full fit — $160+</label>
+                <label class="svc-check-item"><input type="checkbox" name="services" value="Formal dress hem — $50+" data-price="50"> Formal dress hem — $50+</label>
+                <label class="svc-check-item"><input type="checkbox" name="services" value="Trouser alterations — $35+" data-price="35"> Trouser alterations — $35+</label>
+                <label class="svc-check-item"><input type="checkbox" name="services" value="Jacket take-in — $80+" data-price="80"> Jacket take-in — $80+</label>
+                <label class="svc-check-item"><input type="checkbox" name="services" value="Suit full fit — $160+" data-price="160"> Suit full fit — $160+</label>
               </div>
               <div class="svc-check-group">
                 <div class="svc-check-head">Repair &amp; Restore</div>
-                <label class="svc-check-item"><input type="checkbox" data-price="3"> Button replacement — $3 each</label>
-                <label class="svc-check-item"><input type="checkbox" data-price="5"> Patches — $5–25</label>
-                <label class="svc-check-item"><input type="checkbox" data-price="30"> Replace elastic — $30</label>
-                <label class="svc-check-item"><input type="checkbox" data-price="25"> Zipper replacement — $25+</label>
-                <label class="svc-check-item"><input type="checkbox" data-price="30"> Invisible mending — $30+</label>
-                <label class="svc-check-item"><input type="checkbox" data-price="95"> Jacket reline — $95+</label>
+                <label class="svc-check-item"><input type="checkbox" name="services" value="Button replacement — $3 each" data-price="3"> Button replacement — $3 each</label>
+                <label class="svc-check-item"><input type="checkbox" name="services" value="Patches — $5-25" data-price="5"> Patches — $5–25</label>
+                <label class="svc-check-item"><input type="checkbox" name="services" value="Replace elastic — $30" data-price="30"> Replace elastic — $30</label>
+                <label class="svc-check-item"><input type="checkbox" name="services" value="Zipper replacement — $25+" data-price="25"> Zipper replacement — $25+</label>
+                <label class="svc-check-item"><input type="checkbox" name="services" value="Invisible mending — $30+" data-price="30"> Invisible mending — $30+</label>
+                <label class="svc-check-item"><input type="checkbox" name="services" value="Jacket reline — $95+" data-price="95"> Jacket reline — $95+</label>
               </div>
             </div>
             <div class="err" id="fServicesErr">Please select at least one service.</div>
           </div>
           <div class="field">
-            <label class="check"><input type="checkbox" id="fRush"> Rush service (+50%, ready in 48 hours when possible)</label>
+            <label class="check"><input type="checkbox" id="fRush" name="rush" value="Yes — rush service"> Rush service (+50%, ready in 48 hours when possible)</label>
           </div>
           <div class="field">
             <label for="fNotes">Notes — tell me about the work</label>
-            <textarea id="fNotes" placeholder="e.g. Jacket take-in at the waist and two buttons replaced on the sleeve — navy wool…"></textarea>
+            <textarea id="fNotes" name="notes" placeholder="e.g. Jacket take-in at the waist and two buttons replaced on the sleeve — navy wool…"></textarea>
           </div>
           <div class="field">
             <label for="fAttach">Attach a photo (optional)</label>
-            <input id="fAttach" type="file" accept="image/*,.pdf" multiple>
+            <input id="fAttach" name="attachment" type="file" accept="image/*,.pdf" multiple>
           </div>
           <div class="estimate">
             <span>Estimated total<small>Final price confirmed at fitting</small></span>
@@ -1017,11 +1019,20 @@ footer a:hover{color:var(--thread);border-bottom-color:var(--thread)}
       return;
     }
     var name = document.getElementById('fName').value.trim().split(' ')[0];
-    document.getElementById('successMsg').textContent =
-      'Thanks, ' + name + ' — choose a time on the next page and I\'ll confirm everything by text or email.';
-    form.style.display = 'none';
-    document.getElementById('formSuccess').classList.add('show');
-    window.open('https://calendly.com/omalleyfabrics/30min', '_blank');
+    fetch('/', {
+      method: 'POST',
+      body: new FormData(form)
+    })
+    .then(function(){
+      document.getElementById('successMsg').textContent =
+        'Thanks, ' + name + ' — choose a time on the next page and I\'ll confirm everything by text or email.';
+      form.style.display = 'none';
+      document.getElementById('formSuccess').classList.add('show');
+      window.open('https://calendly.com/omalleyfabrics/30min', '_blank');
+    })
+    .catch(function(){
+      alert('Sorry, there was a problem sending your request. Please call 301-448-9733.');
+    });
   });
   form.addEventListener('input', function(e){
     var f = e.target.closest('.field');
