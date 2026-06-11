@@ -219,6 +219,9 @@ section{padding:96px 0}
 .port-item figcaption{padding:12px 14px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--bottle)}
 .port-item.port-wide{grid-column:span 2}
 .port-item.port-wide .port-img{aspect-ratio:16/9}
+.port-ba-wrap{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.port-ba-half .port-img{aspect-ratio:3/4;border-radius:0}
+.port-ba-half:first-child{border-right:2px solid var(--bottle)}
 
 /* fabric library swatches */
 .swatch-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
@@ -649,6 +652,18 @@ footer a:hover{color:var(--thread);border-bottom-color:var(--thread)}
       <figure class="port-item reveal">
         <div class="port-img"><img src="PICS/before.jpg" alt="Before restoration — heirloom garment brought in for repair" loading="lazy" style="object-position:center top"></div>
         <figcaption>Before Restoration</figcaption>
+      </figure>
+      <figure class="port-item port-wide port-beforeafter reveal">
+        <div class="port-ba-wrap">
+          <div class="port-ba-half">
+            <div class="port-img"><img src="PICS/pantsbefore.jpeg" alt="Trousers before alteration" loading="lazy" style="object-position:center top"></div>
+            <figcaption>Before — Trousers</figcaption>
+          </div>
+          <div class="port-ba-half">
+            <div class="port-img"><img src="PICS/pantsafter.jpeg" alt="Trousers after alteration" loading="lazy" style="object-position:center top"></div>
+            <figcaption>After — Trousers</figcaption>
+          </div>
+        </div>
       </figure>
     </div>
   </div>
