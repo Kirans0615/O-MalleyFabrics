@@ -411,8 +411,8 @@ footer a:hover{color:var(--thread);border-bottom-color:var(--thread)}
 <div class="tape" aria-hidden="true">
   <div class="tape-track" id="tapeTrack">
     <span>Alterations</span><span class="tick">✂</span>
-    <span>Bridal &amp; Formalwear</span><span class="tick">✂</span>
-    <span>Bespoke Garments</span><span class="tick">✂</span>
+    <span>Soft Furnishings</span><span class="tick">✂</span>
+    <span>Formal Wear</span><span class="tick">✂</span>
     <span>Repairs &amp; Restoration</span><span class="tick">✂</span>
     <span>Irish Linen Sourcing</span><span class="tick">✂</span>
   </div>
@@ -442,26 +442,27 @@ footer a:hover{color:var(--thread);border-bottom-color:var(--thread)}
       </article>
       <article class="svc reveal">
         <span class="num">ii.</span>
-        <h3>Bridal &amp; Formal</h3>
-        <p>Wedding gowns, bridesmaids, suits, and bustles — fitted over two to three sessions.</p>
-        <span class="from">From</span><div class="price">$50</div>
+        <h3>Soft Furnishings</h3>
+        <p>Curtains, cushion covers, pillow covers, and home pieces made to fit your space exactly.</p>
+        <span class="from">From</span><div class="price">$20</div>
         <ul>
-          <li>Formal dress hem <b>$50+</b></li>
-          <li>Bridal gown hem <b>$150+</b></li>
-          <li>Bodice take-in <b>$120+</b></li>
-          <li>Bustle (French) <b>$85</b></li>
-          <li>Suit full fit <b>$160+</b></li>
+          <li>Pillow / cushion cover <b>$20+</b></li>
+          <li>Curtain hem (per panel) <b>$25+</b></li>
+          <li>Curtain made to measure <b>$40+</b></li>
+          <li>Roman blind <b>$60+</b></li>
+          <li>Table runner <b>$30+</b></li>
         </ul>
       </article>
       <article class="svc reveal">
         <span class="num">iii.</span>
-        <h3>Bespoke</h3>
-        <p>Made-to-measure garments cut from cloth we choose together — including Irish linen and tweed sourced through my mother's shop.</p>
-        <span class="from">From</span><div class="price">$240</div>
+        <h3>Formal Wear</h3>
+        <p>Suit and formal dress alterations for occasions that demand a clean, precise fit.</p>
+        <span class="from">From</span><div class="price">$50</div>
         <ul>
-          <li>Christening gown <b>$240+</b></li>
-          <li>Linen dress <b>$280+</b></li>
-          <li>Tweed waistcoat <b>$320+</b></li>
+          <li>Formal dress hem <b>$50+</b></li>
+          <li>Trouser alterations <b>$35+</b></li>
+          <li>Jacket take-in <b>$80+</b></li>
+          <li>Suit full fit <b>$160+</b></li>
         </ul>
       </article>
       <article class="svc reveal">
@@ -668,23 +669,35 @@ footer a:hover{color:var(--thread);border-bottom-color:var(--thread)}
               <label for="fService">Service</label>
               <select id="fService" required>
                 <option value="">Choose a service…</option>
-                <option value="panthem" data-price="20">Pants hem — $20</option>
-                <option value="jeanhem" data-price="25">Jeans hem (original hem) — $25</option>
-                <option value="skirtem" data-price="30">Skirt / dress hem — $30</option>
-                <option value="waist" data-price="35">Waist in or out — $35</option>
-                <option value="sleeve" data-price="35">Sleeve shortening — $35</option>
-                <option value="strap" data-price="25">Strap adjustment — $25</option>
-                <option value="elastic" data-price="30">Replace elastic — $30</option>
-                <option value="button" data-price="3">Button replacement — $3 each</option>
-                <option value="patch" data-price="5">Patches — $5–25</option>
-                <option value="zipper" data-price="25">Zipper replacement — $25+</option>
-                <option value="mend" data-price="30">Invisible mending — $30+</option>
-                <option value="formalhem" data-price="50">Formal dress hem — $50+</option>
-                <option value="gownhem" data-price="150">Bridal gown hem — $150+</option>
-                <option value="bodice" data-price="120">Bodice take-in — $120+</option>
-                <option value="bustle" data-price="85">Bustle — $85</option>
-                <option value="suit" data-price="160">Suit full fit — $160+</option>
-                <option value="bespoke" data-price="280">Bespoke garment — from $280</option>
+                <optgroup label="Alterations">
+                  <option value="panthem" data-price="20">Pants hem — $20</option>
+                  <option value="jeanhem" data-price="25">Jeans hem (original hem) — $25</option>
+                  <option value="skirthem" data-price="30">Skirt / dress hem — $30</option>
+                  <option value="waist" data-price="35">Waist in or out — $35</option>
+                  <option value="sleeve" data-price="35">Sleeve shortening — $35</option>
+                  <option value="strap" data-price="25">Strap adjustment — $25</option>
+                </optgroup>
+                <optgroup label="Soft Furnishings">
+                  <option value="pillowcover" data-price="20">Pillow / cushion cover — $20+</option>
+                  <option value="curtainhem" data-price="25">Curtain hem (per panel) — $25+</option>
+                  <option value="curtainmtm" data-price="40">Curtain made to measure — $40+</option>
+                  <option value="romanblind" data-price="60">Roman blind — $60+</option>
+                  <option value="tablerunner" data-price="30">Table runner — $30+</option>
+                </optgroup>
+                <optgroup label="Formal Wear">
+                  <option value="formalhem" data-price="50">Formal dress hem — $50+</option>
+                  <option value="trouser" data-price="35">Trouser alterations — $35+</option>
+                  <option value="jacket" data-price="80">Jacket take-in — $80+</option>
+                  <option value="suit" data-price="160">Suit full fit — $160+</option>
+                </optgroup>
+                <optgroup label="Repair &amp; Restore">
+                  <option value="button" data-price="3">Button replacement — $3 each</option>
+                  <option value="patch" data-price="5">Patches — $5–25</option>
+                  <option value="elastic" data-price="30">Replace elastic — $30</option>
+                  <option value="zipper" data-price="25">Zipper replacement — $25+</option>
+                  <option value="mend" data-price="30">Invisible mending — $30+</option>
+                  <option value="reline" data-price="95">Jacket reline — $95+</option>
+                </optgroup>
               </select>
               <div class="err">Please choose a service.</div>
             </div>
@@ -784,7 +797,7 @@ footer a:hover{color:var(--thread);border-bottom-color:var(--thread)}
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <span class="script">O'Malley Fabrics</span>
+        <a class="script" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" aria-label="Back to top" style="text-decoration:none;cursor:pointer">O'Malley Fabrics</a>
         <p>Grainne O'Malley — second-generation Irish seamstress serving the DMV, following the thread her mother started in Ballina in 1978.</p>
       </div>
       <div>
