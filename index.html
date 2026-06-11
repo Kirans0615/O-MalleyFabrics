@@ -794,7 +794,7 @@ footer a:hover{color:var(--thread);border-bottom-color:var(--thread)}
             <span>Estimated total<small>Final price confirmed at fitting</small></span>
             <strong id="estOut">$—</strong>
           </div>
-          <button class="btn btn-solid" type="submit" style="width:100%">Request Appointment</button>
+          <button class="btn btn-solid" type="submit" style="width:100%">Request &amp; Book a Time →</button>
         </form>
         <div class="form-success" id="formSuccess">
           <div class="big">Go raibh maith agat!</div>
@@ -1018,9 +1018,10 @@ footer a:hover{color:var(--thread);border-bottom-color:var(--thread)}
     }
     var name = document.getElementById('fName').value.trim().split(' ')[0];
     document.getElementById('successMsg').textContent =
-      'Thanks, ' + name + ' — I\'ll be in touch by text or email within one business day to confirm.';
+      'Thanks, ' + name + ' — choose a time on the next page and I\'ll confirm everything by text or email.';
     form.style.display = 'none';
     document.getElementById('formSuccess').classList.add('show');
+    window.open('https://calendly.com/omalleyfabrics/30min', '_blank');
   });
   form.addEventListener('input', function(e){
     var f = e.target.closest('.field');
