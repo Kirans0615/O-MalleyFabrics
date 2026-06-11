@@ -166,6 +166,8 @@ section{padding:96px 0}
 .her-grid{display:grid;grid-template-columns:1fr 110px 1fr;align-items:stretch}
 .her-card{background:rgba(239,235,224,.05);border:1px solid rgba(239,235,224,.18);overflow:hidden}
 .her-card-img{width:100%;height:260px;object-fit:cover;object-position:center top;display:block;filter:sepia(10%) brightness(.9)}
+.her-card-zoom-wrap{overflow:hidden;height:260px;background:var(--bottle)}
+.her-card-zoom-wrap .her-card-img{height:100%}
 .her-card-body{padding:32px 34px 38px}
 .her-card .flag{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--thread)}
 .her-card h3{font-size:30px;margin:12px 0 6px}
@@ -535,7 +537,9 @@ footer a:hover{color:var(--thread);border-bottom-color:var(--thread)}
         </svg>
       </div>
       <div class="her-card">
-        <img class="her-card-img" src="PICS/mom.jpg" alt="O'Malley Fabrics studio in Bethesda, Maryland" loading="lazy" style="object-position:center 70%">
+        <div class="her-card-zoom-wrap">
+          <img class="her-card-img" src="PICS/mom.jpg" alt="O'Malley Fabrics studio in Bethesda, Maryland" loading="lazy" style="object-position:center 70%;transform:scale(0.82);transform-origin:center 70%">
+        </div>
         <div class="her-card-body">
           <span class="flag">The Studio — USA</span>
           <h3>O'Malley Fabrics</h3>
