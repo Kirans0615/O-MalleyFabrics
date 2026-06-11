@@ -73,11 +73,10 @@ header.scrolled{box-shadow:0 4px 24px rgba(20,53,42,.10)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
 .monogram{
-  width:42px;height:42px;border:1.5px solid var(--bottle);border-radius:50%;
-  display:grid;place-items:center;font-family:var(--serif);font-size:17px;
-  color:var(--bottle);position:relative;
+  width:48px;height:48px;border:1.5px solid var(--bottle);border-radius:50%;
+  overflow:hidden;display:grid;place-items:center;flex-shrink:0;
 }
-.monogram::after{content:"";position:absolute;inset:3px;border:1px dashed rgba(20,53,42,.4);border-radius:50%}
+.monogram img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
 .brand-name{font-family:var(--serif);font-size:21px;letter-spacing:.02em;color:var(--bottle)}
 .brand-sub{display:block;font-family:var(--sans);font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--thread-2)}
 .nav-links{display:flex;gap:30px;list-style:none;align-items:center}
@@ -354,7 +353,7 @@ footer a:hover{color:var(--thread);border-bottom-color:var(--thread)}
 <header id="top">
   <div class="wrap nav">
     <a class="brand" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" aria-label="O'Malley Fabrics home">
-      <span class="monogram">O'M</span>
+      <span class="monogram"><img src="PICS/OmalleyCrest.jpg" alt="O'Malley Fabrics crest"></span>
       <span><span class="brand-name">O'Malley Fabrics</span><span class="brand-sub">Seamstress · DMV</span></span>
     </a>
     <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
